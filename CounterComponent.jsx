@@ -10,7 +10,7 @@ class CounterComponent extends Component{
             Normal Component - Prop value
           </div>
           <div className="value">
-            {this.props.number}
+            {JSON.stringify(this.props.number)}
           </div>
         </div>
       )

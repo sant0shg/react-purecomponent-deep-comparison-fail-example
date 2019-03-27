@@ -10,7 +10,7 @@ class CounterPureComponent extends PureComponent{
           Pure Component - Prop value
           </div>
           <div className="value">
-            {this.props.number}
+            {JSON.stringify(this.props.number)}
           </div>
         </div>
     )

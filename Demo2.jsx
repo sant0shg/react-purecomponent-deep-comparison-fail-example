@@ -5,13 +5,14 @@ import './style.css';
 
 class Demo2 extends Component {
   state = {
-    counter: 0
+    counter: {
+      no: 0
+    }
   }
  
   handleClick = () => {
     const { counter } = this.state;
-    counter = counter + 1;
-    console.log("counter", counter)
+    counter.no = counter.no + 1;
     this.setState({
       counter: counter
     })
@@ -22,10 +23,15 @@ class Demo2 extends Component {
     return(
       <React.Fragment>
       <h1>Demo 2</h1>
-      <button onClick={this.handleClick}>Click here to update number</button>
-      <div className="app">
-        <CounterComponent number={counter}/>
-        <CounterPureComponent number={counter}/>
+      <button onClick={this.handleClick} className="btn">Click here to update number</button>
+      <div>
+      <div className="wrapper">
+        State - {JSON.stringify(counter)}
+        <div className="app">
+          <CounterComponent number={counter}/>
+          <CounterPureComponent number={counter}/>
+        </div>
+        </div>
       </div>
       </React.Fragment>
     )
