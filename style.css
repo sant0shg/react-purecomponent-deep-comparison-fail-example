@@ -1,0 +1,30 @@
+#root{
+  font-family: sans-serif;
+}
+.app{
+  display: flex;
+}
+.card{
+  width: 300px;
+  height: 200px;
+  background: #2979ff;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  font-size: 25px;
+}
+.title, .value{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.card.pure{
+  background: #ff6d00;
+  color: #111111b3
+}
